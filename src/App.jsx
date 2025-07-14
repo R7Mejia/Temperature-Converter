@@ -23,8 +23,9 @@ function App() {
           value={celcius}
           onChange={(e) => setCelcius(e.target.value)}
         />
-        <button onClick={convertTemperature}>Convert to °F</button>
-        <br />
+        <button onClick={convertTemperature}>Convert °C to °F</button>
+        <button onClick={convertTemperature}>Convert °F to °C</button> 
+
         {farenheit && (
           <h2 key={farenheit}>
             {farenheit > 105 ? (<span style={{ color: 'darkred' }}> {`🔥`} {farenheit}°F {'¡adios!'}</span>)
@@ -33,8 +34,9 @@ function App() {
                   : (<span style={{ color: 'lightblue' }}> {`🥶`} {farenheit}°F</span>
             )}
           </h2>
-        )}
 
+        )}
+        
 
       </div>
       <Footer />
