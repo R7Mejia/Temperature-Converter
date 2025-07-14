@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Converter from './components/Converter'
 import CopyRight from './components/CopyRight'
+import Footer from './components/Footer'
 
 function App() {
   const [celcius, setCelcius] = useState("")
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <>
-      <CopyRight/>
+      
       <Converter />
       <div className="container">
         <input 
@@ -36,6 +37,8 @@ function App() {
 
 
       </div>
+      <Footer />
+      <CopyRight />
     </>
   )
 }
