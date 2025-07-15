@@ -24,7 +24,7 @@ function App() {
           onChange={(e) => setCelcius(e.target.value)}
         />
         <button onClick={convertTemperature}>Convert °C to °F</button>
-        <button onClick={convertTemperature}>Convert °F to °C</button> 
+        
 
         {farenheit && (
           <h2 key={farenheit}>
@@ -38,6 +38,23 @@ function App() {
         )}
         
 
+      </div>
+
+      <div className="container2">
+        <input type="text" placeholder="Enter temperature in °F"
+          value={farenheit}
+          onChange={(e) => setFarenheit(e.target.value)}
+        />
+        <button onClick={convertTemperature}>Convert °F to °C</button>
+        {celcius && (
+          <h2 key={celcius}>
+            {celcius > 40 ? (<span style={{ color: 'darkred' }}> {`🔥`} {celcius}°C {'¡adios!'}</span>)
+              : celcius > 30 ? (<span style={{ color: 'red' }}> {`🥵`} {celcius} °C</span>)
+                : celcius >= 25 ? (<span style={{ color: 'yellow' }}> {`🤠`} {celcius} °C</span>)
+                  : (<span style={{ color: 'lightblue' }}> {`🥶`} {celcius}°C</span>
+            )}
+          </h2>
+        )}
       </div>
       <Footer />
       <CopyRight />
