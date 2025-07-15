@@ -1,16 +1,14 @@
-body{
+body {
   background-color: black;
   background-image: url(./components/images/weatherBG3.png);
   background-size: cover;
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: rgb(255, 136, 0);
- 
-
 }
-h1{
+h1 {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
@@ -18,20 +16,64 @@ h1{
   padding: 0;
   color: rgb(250, 93, 8);
 }
-.container{
+.container {
   margin: 0 auto;
-  width: 500px;
-  height: 500px;
-  padding: 10%;
+  width: 90%;
+  max-width: 500px;
+  min-width: 260px;
+  height: auto;
+  padding: 5% 2%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.copyright{
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 8% 1%;
+    min-width: unset;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input,
+  button {
+    width: 90vw;
+    max-width: 98%;
+    font-size: 1rem;
+  }
+}
+
+.conversion-selector {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 0 0.5rem 0;
+  margin-top: 2rem;
+  border-radius: 0 0 16px 16px;
+}
+
+.copyright {
   text-align: center;
   font-size: 12px;
   color: rgb(36, 14, 2);
   padding: 0;
   font-weight: bold;
 }
-button{
+button {
   background: #368f92;
   border: none;
   color: white;
@@ -45,15 +87,13 @@ button{
   width: 7rem;
   height: 1.8rem;
 }
-button:hover{
+button:hover {
   background: linear-gradient(to right, #55eff5, #088886);
-  
 }
 ::placeholder {
   color: rgb(246, 243, 240);
 }
-input
-{
+input {
   background: linear-gradient(to right, #07e5ed, #088886);
   border: none;
   color: white;
