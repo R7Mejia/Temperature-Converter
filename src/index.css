@@ -7,6 +7,12 @@ body {
   background-position: center;
   font-family: "Montserrat", sans-serif;
   color: rgb(255, 136, 0);
+  /* Ensure body takes at least full viewport height */
+  min-height: 100vh;
+  /* Add padding-bottom to ensure space for content before copyright */
+  padding-bottom: 2rem; /* Adjust as needed */
+  display: flex; /* Use flexbox to organize content vertically */
+  flex-direction: column;
 }
 h1 {
   font-size: 60px;
@@ -29,21 +35,29 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Allow container to grow if content is less than viewport height */
+  flex-grow: 1;
+  margin-top: 5vh; /* Add some space from the top */
 }
+
+/* Old .copyright removed, now there's only one */
+/* This is the new placement for the copyright */
 .copyright {
   width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   text-align: center;
   font-size: 0.9rem;
   color: #f4d9ad;
   font-weight: bold;
-  border-radius: 0 0 16px 16px;
+  /* Removed fixed positioning */
+  /* margin-top: auto; */ /* Pushes it to the bottom of the flex container */
   padding: 0.5rem 0;
-  background: none;
-  margin: 0;
+  background: none; /* Keep background none as per original request to only move letters */
+  margin-top: 2rem; /* Add some space above the copyright */
+  /* If you want the black background behind the copyright text to be uniform: */
+  /* background: rgba(0, 0, 0, 0.5); /* Example if you want a semi-transparent black background */
+  /* border-radius: 0 0 16px 16px; /* Example if you want rounded corners */
 }
+
 /* Responsive styles */
 @media (max-width: 600px) {
   .container {
@@ -63,6 +77,10 @@ h1 {
     height: auto;
     padding: 10px 0;
   }
+  /* Reduce font size for conversion selector labels on small screens */
+  .conversion-selector label {
+    font-size: 0.9rem; /* Adjust as needed */
+  }
 }
 
 .conversion-selector {
@@ -70,8 +88,11 @@ h1 {
   gap: 1.5rem;
   justify-content: center;
   margin-bottom: 1.5rem;
+  /* Allow items to wrap to the next line */
+  flex-wrap: wrap;
 }
 
+/* Remove this if it's redundant with .copyright above */
 .footer {
   text-align: center;
   font-size: 1rem;
@@ -82,17 +103,6 @@ h1 {
   border-radius: 0 0 16px 16px;
 }
 
-.copyright {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #fff;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 0 0 16px 16px;
-  padding: 0.5rem 0;
-}
 button {
   background: #368f92;
   border: none;
