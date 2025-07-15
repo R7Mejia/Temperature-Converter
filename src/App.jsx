@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Converter from './components/Converter'
 import CopyRight from './components/CopyRight'
-import Footer from './components/Footer'
 
 function App() {
   // State for temperature values
@@ -101,7 +100,7 @@ function App() {
           </>
         )}
       </div>
-      {/* <Footer text="Temperature Converter App © 2025. All rights reserved." /> */}
+      {/* Removed Footer, only CopyRight remains at the bottom */}
       <CopyRight />
     </>
   )
