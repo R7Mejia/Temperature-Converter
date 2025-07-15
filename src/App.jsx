@@ -36,11 +36,6 @@ function App() {
           </h2>
 
         )}
-        
-
-      </div>
-
-      <div className="container2">
         <input type="text" placeholder="Enter temperature in °F"
           value={farenheit}
           onChange={(e) => setFarenheit(e.target.value)}
@@ -52,9 +47,14 @@ function App() {
               : celcius > 30 ? (<span style={{ color: 'red' }}> {`🥵`} {celcius} °C</span>)
                 : celcius >= 25 ? (<span style={{ color: 'yellow' }}> {`🤠`} {celcius} °C</span>)
                   : (<span style={{ color: 'lightblue' }}> {`🥶`} {celcius}°C</span>
-            )}
+                  )}
           </h2>
         )}
+
+      {/* </div>
+
+      <div className="container2">
+         */}
       </div>
       <Footer />
       <CopyRight />
