@@ -101,7 +101,7 @@ function App() {
           </>
         )}
       </div>
-      <Footer text="Temperature Converter App © 2025. All rights reserved." />
+      {/* <Footer text="Temperature Converter App © 2025. All rights reserved." /> */}
       <CopyRight />
     </>
   )
