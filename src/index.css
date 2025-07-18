@@ -52,7 +52,7 @@ h1 {
   /* margin-top: auto; */ /* Pushes it to the bottom of the flex container */
   padding: 0.5rem 0;
   background: none; /* Keep background none as per original request to only move letters */
-  margin-top: 2rem; /* Add some space above the copyright */
+  margin-top: 7rem; /* Add some space above the copyright */
   /* If you want the black background behind the copyright text to be uniform: */
   /* background: rgba(0, 0, 0, 0.5); /* Example if you want a semi-transparent black background */
   /* border-radius: 0 0 16px 16px; /* Example if you want rounded corners */
