@@ -13,6 +13,7 @@ body {
   padding-bottom: 2rem; /* Adjust as needed */
   display: flex; /* Use flexbox to organize content vertically */
   flex-direction: column;
+  /* Ensure body takes full height and children can grow */
 }
 h1 {
   font-size: 60px;
@@ -45,17 +46,44 @@ h1 {
 .copyright {
   width: 100%;
   text-align: center;
-  font-size: 0.9rem;
-  color: #f4d9ad;
+  font-size: 1rem;
+  color: #fff;
   font-weight: bold;
-  /* Removed fixed positioning */
-  /* margin-top: auto; */ /* Pushes it to the bottom of the flex container */
   padding: 0.5rem 0;
-  background: none; /* Keep background none as per original request to only move letters */
-  margin-top: 7rem; /* Add some space above the copyright */
-  /* If you want the black background behind the copyright text to be uniform: */
-  /* background: rgba(0, 0, 0, 0.5); /* Example if you want a semi-transparent black background */
-  /* border-radius: 0 0 16px 16px; /* Example if you want rounded corners */
+  background: none;
+  margin-top: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  /* Animation: fade in and color cycle */
+  animation: copyright-fade 2s ease-in, copyright-color 4s linear infinite;
+}
+
+@keyframes copyright-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes copyright-color {
+  0% {
+    color: #fff;
+  }
+  25% {
+    color: #55eff5;
+  }
+  50% {
+    color: #ffb347;
+  }
+  75% {
+    color: #ff6961;
+  }
+  100% {
+    color: #fff;
+  }
 }
 
 /* Responsive styles */
