@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "fa0b2ff3-961e-4dce-936b-1bac6cb4f58c"
+      }
+    },
+    "android": {
+      "package": "com.robertmejia.temperatureconverter"
+    }
+  }
+}
